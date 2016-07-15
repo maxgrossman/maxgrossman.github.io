@@ -1,0 +1,633 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Max Grossman Homepage</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,100' rel='stylesheet' type='text/css'>
+         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+        <script type="text/javascript">
+            function open_win() {
+                
+            }
+        </script>
+    </head>
+    
+    <style>
+        * {margin:0;}
+        
+        html,body {
+            color: #8A8A8A;
+            font-size: 16px;
+            height: 100%;
+            padding: 0;
+            font-family: 'Alegreya Sans SC', sans-serif;
+        }
+        
+        .row {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            height:100%;
+
+        }
+        
+        .row > [class*='col-'] {
+            display: flex;
+            flex-direction:column;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        /* header */
+        .head {
+            text-align: center; 
+            width: 100%;
+        }
+        .nav img {
+            height:60px;
+            width:60px;
+            margin: 5px 20px;
+        }
+        .nav {
+            padding-top:10px;
+            display:block;
+            text-decoration: none;
+        }
+        
+        a {
+            color: #8A8A8A;
+            font-size:22px;
+        }
+        
+        /* Jumbotron */
+        
+        
+        .jumbotron {
+            background-image: url("NJLS_sub5.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height:200px;
+            margin-bottom:100px;
+            position:relative;
+        }
+        
+        #intro {
+            height:100%;
+            margin: 0 auto;
+            width:84%;
+        }
+        #introtxt { 
+            color: #fff;
+            line-height: 100%;
+            text-align:center;
+        }
+        
+        .jumbotron p {
+            color:#fff;
+            font-size: 14px;
+            right:15px;
+            position:absolute;
+            text-align:right;
+            top:170px;
+        }
+        
+        .jumbotron h3 {
+            text-align: center;
+            padding:80px;
+            opacity: 0.8;
+        }
+        
+        /* Tagline */
+        
+        .tagline {
+            height:900px;
+            margin: 0 auto;
+            text-align: center;
+            position: 
+        }
+        
+        .tagline h2 {
+            padding: 0 100px;
+            margin: auto;
+            width:100%;
+            z-index: 1;
+            position: absolute;
+        }
+        
+        .tagline div img {
+            margin: 300px 20px; 
+            width:15%;
+            text-align: center;
+        }
+        
+        /* Jumbotron */
+        
+        
+        .jumbotron2 {
+            background-image: url("LandsatArt.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height:200px;
+            margin-bottom:100px;
+            position:relative;
+        }
+        
+        #intro {
+            margin: 0 auto;
+            width:84%;
+        }
+        #introtxt2 { 
+            color: #fff;
+            line-height: 100%;
+            height: 100%:
+            text-align:center;            
+        }
+        
+        .jumbotron2 p {
+            color:#fff;
+            font-size: 14px;
+            right:15px;
+            position:absolute;
+            text-align:right;
+            top:170px;
+        }
+        
+        .jumbotron2f h3 {
+            text-align: center;
+            padding:80px;
+            opacity: 0.8;
+        }
+        
+        
+        /* About Me */
+        
+        #AboutMeAnchor {
+            padding:30px 0 50px 0;
+        }
+        
+        .DescNav {
+            cursor: pointer;
+            cursor: hand;
+        }
+                
+        .AboutMe li {
+            font-size:40px;
+            height:200px;
+            margin: 15px 0;
+            position:relative;
+            text-align: center;
+        }
+        
+        .AboutMeSubTitle {
+            color: #8A8A8A;
+            opacity: 1;
+            padding: 5px 0 0 10px;
+            position: relative;
+            top:60px;
+        }
+        
+        .AboutMeNav {
+            position: relative;
+        }
+        #GeoStu:hover {
+            background-image: url("AthensSentinal_lilSub.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #fff;
+            height:200px;
+        }
+        
+        #IAFStu:hover { 
+            background-image: url("ChineseBabble.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #fff;
+            height: 200px;
+            opacity: 0.85;
+        }
+        
+        #SrvMan:hover { 
+            background-image: url("RainBarrrell.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #fff;
+            height: 200px;
+            opacity: 0.8;
+        }
+        
+        #MedSrf:hover { 
+            background-image: url("SuckLessAtSurf.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #fff;
+            height: 200px;
+            opacity: 0.8;
+        }
+        
+        #HHHEAD:hover { 
+            background-image: url("BlackStarr.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #fff;
+            height: 200px;
+            opacity: 0.8;
+        }
+        
+        #GeoStu,
+        #IAFStu, 
+        #SrvMan,
+        #MedSrf, 
+        #HHHEAD {
+            border-radius: 3px;
+            position: relative;
+        }
+        
+        #GeoStuDesc, 
+        #IAFStuDesc, 
+        #SrvManDesc,
+        #MedSrfDesc,
+        #HHHEADDesc {
+            font-size:14px;
+            float: right;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        #GeoStuDesc {
+            width:50%;
+            padding: 10px;
+            right: 10px;
+            text-align: right;
+            position: absolute;
+            
+        }
+     
+        #IAFStuDesc {
+            padding: 0 10px;
+            right: 10px;
+            text-align: right;
+            top: 60px;
+            width:50%;
+            position: absolute;
+        }
+        
+         #SrvManDesc {
+            position: absolute;
+            text-align: right;
+            top: 150px;
+            right:10px;
+        }
+        
+        #MedSrfDesc {
+            position: absolute;
+            text-align: left;
+            top:20px;
+            left: 20px;
+            
+        }
+        
+        #HHHEADDesc {
+            text-align:center;
+            position:absolute;
+            width: 100%;
+        }
+        
+        
+        .PcredB {
+            color: #fff;
+            font-size:11px;
+            opacity: 1;
+            position: absolute;
+            top:180px;
+            right: 15px;
+        }
+        
+        .PcredT {
+            color: #fff;
+            font-size:11px;
+            opacity: 1;
+            position: absolute;
+            top:10px;
+            right: 15px;
+        }
+        
+        
+        
+        #GeoStu:hover .AboutMeSubTitle,
+        #IAFStu:hover .AboutMeSubTitle,
+        #SrvMan:hover .AboutMeSubTitle,
+        #MedSrf:hover .AboutMeSubTitle,
+        #HHHEAD:hover .AboutMeSubTitle {
+            opacity: 0;
+        }
+        
+        #GeoStu:hover #GeoStuDesc,
+        #IAFStu:hover #IAFStuDesc,
+        #SrvMan:hover #SrvManDesc,
+        #MedSrf:hover #MedSrfDesc,
+        #HHHEAD:hover #HHHEADDesc,
+        #GeoStu:hover .PcredB,
+        #IAFStu:hover .PcredB,
+        #MedSrf:hover .PcredB,
+        #HHHEAD:hover .PcredT {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .AboutMe .row {
+            margin: 50px 20px;
+    
+        }
+        .col-xs-4 img {
+            margin:auto;
+            width:40%;
+        }
+            
+        .col-xs-4 form {
+            height:100%;
+            width:100%;
+        }
+        
+        #butlink {
+            border-style: none;
+            background-color:transparent; 
+            font-size:25px;
+            height:100%;
+            transition: 0.5s;
+            text-align: center;
+            width:100%;
+        }
+        
+        
+        #butlink:hover {
+            box-shadow: inset 0 0 0 1px lightgrey;
+            background-color:rgba(211,211,211,0.5);
+            border-radius: 2px;   
+        }
+        
+        #butlink:click {
+            background:transparent;
+            border:none;
+        }
+        
+        /* Map */
+        
+        #map {
+            height:500px;
+            margin: 0 auto;
+            width:100%;
+        }
+        
+        
+        @media (max-width: 767px) {
+            #intro {
+                margin-top:30px;
+            }
+            
+        }
+        
+       
+        
+    </style>
+    
+    <body>
+<!--Header-->
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-10 head">
+                        <ul class="nav">
+                            <li>
+                                <img src="SurfPicReg.png"/>
+                                <img src="world.png"/>
+                                <img src="SurfPicGoof.png"/>
+                            </li>
+                        </ul>
+
+                        <ul class="nav nav-tabs nav-justified">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="MaxSite_hp.html#AboutMeAnchor">About Me</a></li>
+                            <li><a href="#">Projects</a></li>                      
+                            <li><a href="#">Maps</a></li>
+                        </ul>    
+                    </div>
+                    </div>
+                </div>
+            </div>
+<!--Jumbotron-->           
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div id="intro" class="col-xs-10">
+                        <h1 id="introtxt" class="text-center">
+                            Welcome.
+                        </h1>
+                    </div>
+                </div>
+                <p>credit:USGS</p>
+                
+           </div> 
+        </div>
+<!--Tagline-->  
+        <div class="tagline">
+            <h2>My Name is Max.<br><br> I study geography and want to build geospatial tools that support decision makers.</h2>
+            <div>
+                <img src="hammarflip.png"/>
+                <img src="earthOutline.png"/>
+                <img src="hammar.png">
+            </div>
+        </div>
+<!--Jumbotron2-->
+        <div class="jumbotron2">
+            <div class="container">
+                <div class="row">
+                    <div id="intro" class="col-xs-10">
+                        <h1 id="introtxt2" class="text-center">
+                            About Me.
+                        </h1>
+                    </div>
+                </div>
+                <p>credit:USGS</p>
+                
+           </div> 
+        </div>
+<!--AboutMe-->         
+        <div class="AboutMe">
+            <div class="container">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="DescNav">
+                        <div id="GeoStu">
+                            <p class="AboutMeSubTitle">
+                                Geography Student.
+                            </p>
+                            <p id="GeoStuDesc">
+                                I took physical geography in fall of 2014 and was sold. Within Geo, GIS-RS for disaster management is what interests me most.<br>
+                            </p>
+                            <p class="PcredB">Credit: ESA</p>
+                        </div>
+                    </li>
+                    
+                    <li class="DescNav">
+                        <div class="AboutMeNav" id="IAFStu">
+                            <p class="AboutMeSubTitle">
+                                International Affairs Student.
+                            </p>
+                            <p id="IAFStuDesc">
+                                I study international affairs too.
+                                Learning Chinese has been most rewarding. I studied in Taiwan during summer '15. Here I'm talking about renewables, in Chinese.<br>
+                            </p>
+                        </div>  
+                        <p class="PcredB">Credit: Peter Gisang Park</p>
+                    </li>
+                    
+                    <li class="DescNav">
+                        <div class="AboutMeNav" id="SrvMan">
+                            <p class="AboutMeSubTitle">
+                                Community Service  Man.
+                            </p>
+                            <p id="SrvManDesc">
+                                I started serving in college.<br>
+                                I haven't looked back. It rocks!
+                            </p>
+                        </div>  
+                    </li>
+                    
+                    <li class="DescNav">
+                        <div class="AboutMeNav" id="MedSrf">
+                            <p class="AboutMeSubTitle">
+                                Mediocre Surfer.
+                            </p>
+                            <p id="MedSrfDesc">
+                                I caught me first wave when I was 8.<br>
+                                I've always wanted to rip. I'm still working on it.
+                            </p>
+                        </div>
+                        <p class="PcredB">Credit: Julie Oslek</p>
+                    </li>  
+                    
+                    <li class="DescNav">
+                        <div class="AboutMeNav" id="HHHEAD">
+                            <p class="AboutMeSubTitle">
+                                Hip Hop Head.
+                            </p>
+                            <p id="HHHEADDesc">
+                                I really love hip hop.<br>
+                                I make beats and used to have a radio show.<br>
+                                RIP Sean Price.
+                            </p>
+                        </div>  
+                    </li>
+                </ul>
+                
+                <div class='row'>
+                    <div class="col-xs-4">
+                        <img src="resume.png">
+                    </div>
+                      
+                    <div class="col-xs-4">
+                        <form method="get" action="MaxGrossman_Resume.pdf">
+                            <button id="butlink" type="submit">
+                                Resume
+                            </button>
+                        </form>
+                    </div>
+                    <div class='col-xs-4'>
+                        <img src="resumeFLIP.png">
+                    </div>    
+                </div>
+                
+                <div class='row'>
+                    <div class="col-xs-4">
+                        <img src="lilwave.png">
+                    </div>
+                    <div class="col-xs-4">
+                        <form method="get" action="SurferMax.jpg">
+                            <button id="butlink" type="submit">
+                                Proof of Surfing
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="lilwaveFLIP.png">
+                    </div>
+                </div>   
+                <div class='row'>
+                    <div class="col-xs-4">
+                        <img src="beats.png">
+                    </div>
+                    <div class="col-xs-4">
+                        <form method="get" action="https://soundcloud.com/reallionaire-jream/blackanvas">
+                            <button id="butlink" type="submit">
+                                Proof of Beatmaking
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="beatsFLIP.png">
+                     </div>
+                <div class="row">
+                    <div class="col-xs-4">                                  <img src="SunEmoji.png">
+                    </div>
+                    <div class="col-xs-4">
+                        <form method="get" action="https://www.youtube.com/watch?v=9jG3K5L4d44">
+                            <button id="butlink" type="submit">
+                                演講的證據
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="SunEmoji.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <!--Map-->  
+        <div class="map">
+            <div class="container">
+                <div id="map"></div>
+            <script>
+                // Initalize Map
+                var map = L.map('map').setView([39.3279, -74.5035], 13); 
+                
+                L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", 
+                    {
+                    attribution:'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                    maxZoom:18,
+                    id:'maxgrossman.8zntijbf',
+                    accessToken:'pk.eyJ1IjoibWF4Z3Jvc3NtYW4iLCJhIjoiY2loZTQ5bHpxMGlyaXRwbHpsN3FscjA3bSJ9.ry1OJsQ5SCbhrH7fYd7adg',
+                }).addTo(map);
+    
+                // set Marker Icon
+                var surfIcon = L.icon({
+                iconUrl: 'http://emojipedia-us.s3.amazonaws.com/cache/37/89/378968191c4c8c944f761af4935dc785.png',
+                iconSize:     [38, 38], // size of the icon
+                });
+    
+                // Add Rumson
+                var marker = L.marker([39.32278267095801,-74.5061445236206], {icon:surfIcon}).addTo(map);
+    
+                marker.bindPopup("Dudes and Dudets!<br>The only break I call home!<br>Don't get it twisted!");
+            </script>
+            </div>
+        </div>
+        
+        <div class="footer">
+        </div>
+    
+    </body>
+</html>
