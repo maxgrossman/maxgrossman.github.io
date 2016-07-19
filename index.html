@@ -86,7 +86,7 @@
             height:100px;
             margin: 0 auto;
             position:relative;
-            width:84%;
+            width:100%;
         }
         #introtxt { 
             font-size:75px;
@@ -119,7 +119,7 @@
         /* Tagline */
         
         .tagline {
-            height:900px;
+            height:700px;
             margin: 0 auto;
             width:90%;
             position:relative;
@@ -140,7 +140,7 @@
         }
         
         .tagline img {
-            margin: 350px 15px; 
+            margin: 350px 1%; 
             width:15%;
             text-align: center;
         }
@@ -426,17 +426,9 @@
             width:100%;
         }
         
-        @media (min-width: 768px) {
-            #introtxt2 {
-                top:60px;
-            }
+        @media (min-width:768px) {
+            #introtxt {line-height: 70px}
         }
-        
-        @media (max-width: 767px) {
-            #intro {margin-top:25px;}
-            #introtxt {font-size:55px;}
-        }
-        
         @media (max-width: 620px) {
             .tagline h2 {font-size:30px;}
         }
@@ -648,7 +640,7 @@
         </div>
     </div>
         
-        <!--Map-->  
+        <!--Map-- 
         <div class="map">
             <div class="container">
                 <div id="map"></div>
@@ -676,8 +668,9 @@
                 marker.bindPopup("Dudes and Dudets!<br>The only break I call home!<br>Don't get it twisted!");
             </script>
             </div>
+            
         </div>
-        
+        -->
         <div class="footer">
         </div>
     
