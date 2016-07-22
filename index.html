@@ -6,7 +6,37 @@
         <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,100' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script>    
+            /*$( document ).ready(function() {
+ 
+                $( "a" ).click(function( event ) {
+ 
+                    alert( "Thanks for visiting,sike!" );
+                    
+                    event.preventDefault();
+ 
+                });
+ 
+});
+            function getViewportOffset ($e) {
+                var AboutMeNav = $(".AboutMeNav").each()
+                var AboutMeDesc = $(".AboutMeDesc").each()
+                var AboutMe
+                var BottomOffset = $(window).heigth() - TopOffset - AboutMeBox.height();
+                    if (offset.top = Botoffset) {
+                        AboutMeBox.addClass(".onHoverAnimationNav");
+            
+                
+                        AboutMeDesc.addClass(".onHoverAnimationDescPCred");
+                        
+                    } else {
+                        AboutMeBox.removeClass(".onHoverAnimation");
+                        AboutMeDesc.addClass(".onHoverAnimationDescPCred");
+                    }
+            }; */
+            
+        </script>
     </head>
     
     <style>
@@ -418,12 +448,19 @@
         }
         
         
-        /* Map */
+        #footer {
+            height:200px;
+        }
         
-        #map {
-            height:500px;
-            margin: 0 auto;
-            width:100%;
+        
+        #footer li {
+            list-style: none;
+            display: inline;
+            margin:20px 5px;
+        }
+        
+        #footer img {
+            height:25px;`
         }
         
         @media (min-width:768px) {
@@ -437,6 +474,13 @@
             #butlink {font-size:4vw}
         }
         
+        @media (max-width:400px) {
+            #footer li {
+                display: block;
+                margin: 2px;
+            }
+        }
+        
         @media(max-width:380px) {
             #butlink {font-size:3.5vw}
         }
@@ -445,10 +489,22 @@
             .tagline h2 {font-size:28px}
         }
         
+        @media (max-width:768px) {
+            .onHoverAnimationNav{
+                opacity: 0;
+                
+            }
+            
+            .onHoverAnimationDescPCred {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
     </style>
     
     <body>
 <!--Header-->
+        <!--<a href="http://jquery.com/">jQuery</a>-->
         <div class="header">
             <div class="container">
                 <div class="row">
@@ -463,9 +519,9 @@
 
                         <ul class="nav nav-tabs nav-justified">
                             <li><a href="https://maxgrossman.github.io/index.html">Home</a></li>
-                            <li><a href="https://maxgrossman.github.io/index.html#AboutMeAnchor">About Me</a></li>
+                            <!--<li><a href="#AboutMeAnc">About Me</a></li>-->
                             <li><a href="https://maxgrossman.github.io/projects.html">Projects</a></li>                   
-                            <li><a href="#">Maps</a></li>
+                            <li><a href="maps.html">Maps</a></li>
                         </ul>    
                     </div>
                     </div>
@@ -499,49 +555,48 @@
             <div class="container">
                 <div class="row">
                     <div class="intro" class="col-xs-10">
-                        <h1 id="introtxt2" class="text-center">
+                        <h1 id="introtxt2" name="AboutMeAnc" class="text-center">
                             About Me
                         </h1>
                     </div>
                 </div>
-                <p>credit:USGS</p>
-                
+                <p>credit:USGS</p>  
            </div> 
         </div>
-<!--AboutMe-->         
+<!--AboutMe--> 
         <div class="AboutMe">
             <div class="container">
                 <ul class="nav nav-pills nav-stacked">
                     <li class="DescNav">
-                        <div class="AboutMeNav" id="GeoStu">
+                        <div class="AboutMeNav element-to-hide" id="GeoStu">
                             <p class="AboutMeSubTitle">
                                 Geography Student.
                             </p>
-                            <p id="GeoStuDesc">
+                            <p class="AboutMeDesc" id="GeoStuDesc">
                                 I took physical geography in fall of 2014 and was sold.<br>
                             </p>
-                            <p id="PcredGEO">Credit: ESA</p>
+                            <p class="AboutMeDesc" id="PcredGEO">Credit: ESA</p>
                         </div>
                     </li>
                     
                     <li class="DescNav">
-                        <div class="AboutMeNav" id="IAFStu">
+                        <div class="AboutMeNav element-to-hide" id="IAFStu">
                             <p class="AboutMeSubTitle">
                                 International Affairs Student.
                             </p>
-                            <p id="IAFStuDesc">
+                            <p class="AboutMeDesc" id="IAFStuDesc">
                                 International has lead me to study in Taiwan. Here I'm talking about renewables, in Chinese.<br>
                             </p>
                         </div>  
-                        <p class="PcredB">Credit: Peter Gisang Park</p>
+                        <p class="PcredB AboutMeDesc"> Credit: Peter Gisang Park</p>
                     </li>
                     
                     <li class="DescNav">
-                        <div class="AboutMeNav" id="SrvMan">
+                        <div class="AboutMeNav element-to-hide" id="SrvMan">
                             <p class="AboutMeSubTitle">
                                 Community Service  Man.
                             </p>
-                            <p id="SrvManDesc">
+                            <p class="AboutMeDesc" id="SrvManDesc">
                                 I started serving in college.<br>
                                 I haven't looked back. It rocks!
                             </p>
@@ -549,24 +604,24 @@
                     </li>
                     
                     <li class="DescNav">
-                        <div class="AboutMeNav" id="MedSrf">
+                        <div class="AboutMeNav element-to-hide" id="MedSrf">
                             <p class="AboutMeSubTitle">
                                 Mediocre Surfer.
                             </p>
-                            <p id="MedSrfDesc">
+                            <p class="AboutMeDesc" id="MedSrfDesc">
                                 I caught me first wave when I was 8.<br>
                                 I've always wanted to rip. I'm still working on it.
                             </p>
                         </div>
-                        <p class="PcredB">Credit: Julie Oslek</p>
+                        <p class="PcredB AboutMeDesc">Credit: Julie Oslek</p>
                     </li>  
                     
                     <li class="DescNav">
-                        <div class="AboutMeNav" id="HHHEAD">
+                        <div class="AboutMeNav element-to-hide" id="HHHEAD">
                             <p class="AboutMeSubTitle">
                                 Hip Hop Head.
                             </p>
-                            <p id="HHHEADDesc">
+                            <p class="AboutMeDesc" id="HHHEADDesc">
                                 I really love hip hop.<br>
                                 I make beats and used to have a radio show.<br>
                                 RIP Sean Price.
@@ -639,39 +694,13 @@
             </div>
         </div>
     </div>
-        
-        <!--Map-- 
-        <div class="map">
-            <div class="container">
-                <div id="map"></div>
-            <script>
-                // Initalize Map
-                var map = L.map('map').setView([39.3279, -74.5035], 13); 
-                
-                L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", 
-                    {
-                    attribution:'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-                    maxZoom:18,
-                    id:'maxgrossman.8zntijbf',
-                    accessToken:'pk.eyJ1IjoibWF4Z3Jvc3NtYW4iLCJhIjoiY2loZTQ5bHpxMGlyaXRwbHpsN3FscjA3bSJ9.ry1OJsQ5SCbhrH7fYd7adg',
-                }).addTo(map);
-    
-                // set Marker Icon
-                var surfIcon = L.icon({
-                iconUrl: 'http://emojipedia-us.s3.amazonaws.com/cache/37/89/378968191c4c8c944f761af4935dc785.png',
-                iconSize:     [38, 38], // size of the icon
-                });
-    
-                // Add Rumson
-                var marker = L.marker([39.32278267095801,-74.5061445236206], {icon:surfIcon}).addTo(map);
-    
-                marker.bindPopup("Dudes and Dudets!<br>The only break I call home!<br>Don't get it twisted!");
-            </script>
-            </div>
-            
-        </div>
-        -->
-        <div class="footer">
+        <div id="footer">
+            <ul>
+                <li><a href="linkedin.com/in/maxgrossman1"><img src="lilwave.png"></a></li>
+                <li><a href="twitter.com/maxgrossman13"><img src="lilwave.png"></a></li>
+                <li><a href="github.com/maxgrossman"><img src="lilwave.png"></a></li>
+                <li><a href="mailto:maxgrossman@gwu.edu"><img src="lilwave.png"></a></li>
+            </ul>
         </div>
     
     </body>

@@ -143,6 +143,7 @@
             text-align: center;
         }
         
+        /*
         #MaxMap {
             height:1000px;
             margin-left:8%
@@ -154,6 +155,36 @@
             
         }
         
+        */
+        
+        /* Map */
+        
+        .maps h2 {
+            text-align: center;
+            margin:50px;
+        }
+        
+        #Surfmap {
+            height:500px;
+            margin: 0 auto;
+            width:100%;
+        } 
+        
+        
+        #footer {
+            height:200px;
+        }
+        
+        
+        #footer li {
+            list-style: none;
+            display: inline;
+            margin:20px 5px;
+        }
+        
+        #footer img {
+            height:25px;`
+        }
         
         
         @media (min-width:768px) {
@@ -191,12 +222,12 @@
                             </li>
                         </ul>
 
-                        <ul class="nav nav-tabs nav-justified">
+                       <ul class="nav nav-tabs nav-justified">
                             <li><a href="https://maxgrossman.github.io/index.html">Home</a></li>
-                            <li><a href="https://maxgrossman.github.io/index.html#AboutMeAnchor">About Me</a></li>
+                            <!--<li><a href="#AboutMeAnc">About Me</a></li>-->
                             <li><a href="https://maxgrossman.github.io/projects.html">Projects</a></li>                   
-                            <li><a href="#">Maps</a></li>
-                        </ul>    
+                            <li><a href="maps.html">Maps</a></li>
+                        </ul>   
                     </div>
                     </div>
                 </div>
@@ -213,28 +244,44 @@
                 </div>
                 <p>credit:USGS</p>  
            </div> 
-        </div>  
-        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-        <div id="MaxMap">
-            <noscript>
-                <a href='#'>
-                    <img alt='ProjectDash ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MaxProjectsMap&#47;ProjectDash&#47;1_rss.png' style='border: none' />
-                </a>
-            </noscript>
-            <object class='tableauViz' width='100%' height='100%' style='display:none;margin:0 auto;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                <param name='site_root' value='' />
-                <param name='name' value='MaxProjectsMap&#47;ProjectDash' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MaxProjectsMap&#47;ProjectDash&#47;1.png' /> 
-                <param name='animate_transition' value='yes' />
-                <param name='display_static_image' value='yes' />
-                <param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' />
-                <param name='showTabs' value='y' />
-            </object>
+        </div> 
+<!--Maps-->
+
+        <div class="maps">
+            <div class="container">
+                <h2>Where Surfer Max shreds...or atleast tries to shred.</h2>
+                <div id="Surfmap"></div>
+            <script>
+                // Initalize Map
+                var map = L.map('SurfMap').setView([39.3279, -74.5035], 13); 
+                
+                L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", 
+                    {
+                    attribution:'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                    maxZoom:18,
+                    id:'maxgrossman.8zntijbf',
+                    accessToken:'pk.eyJ1IjoibWF4Z3Jvc3NtYW4iLCJhIjoiY2loZTQ5bHpxMGlyaXRwbHpsN3FscjA3bSJ9.ry1OJsQ5SCbhrH7fYd7adg',
+                }).addTo(Surfmap);
+    
+                // set Marker Icon
+                var surfIcon = L.icon({
+                iconUrl: 'http://emojipedia-us.s3.amazonaws.com/cache/37/89/378968191c4c8c944f761af4935dc785.png',
+                iconSize: [38, 38], // size of the icon
+                });
+    
+                // Add Rumson
+                var marker = L.marker([39.32278267095801,-74.5061445236206], {icon:surfIcon}).addTo(Surfmap);
+    
+                marker.bindPopup("Dudes and Dudets!<br>The only break I call home!<br>Don't get it twisted!");
+            </script>
+            </div>
+            
+        </div>
+    
+<!--Footer-->
+        <div id="footer">
+            <ul>
+            </ul>
         </div>
     </body>
 </html>
