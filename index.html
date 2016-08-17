@@ -3,22 +3,9 @@ layout: default
 title: Max Grossman
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="content">
+    <h1 class="page-heading">Max Grossman</h1>
+    <p>I'm Max. I study geography and love surfing. On this site you will find my projects, music I like, code I hopes is helpful, and maps...definitely maps. 
+    </p>
+    <p>Special note about code: I recognize I am gromgrammer (gromet programmer). If there is ever a line of code or workflow that could be more efficient, I would appreciate a <a href="mailto:m.grossman1813@gmail.com" style='color:rgba(80,171,242,1)'>message</a> telling me so. Thanks!</p>
 </div>

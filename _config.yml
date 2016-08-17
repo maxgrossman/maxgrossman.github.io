@@ -23,5 +23,10 @@ twitter_username: MaxGrossman13
 github_username:  maxgrossman
 
 # Build settings
-markdown: HTML
+markdown: kramdown
 theme: minima
+
+# make sass small
+sass:
+    style: :compressed
+    
