@@ -87,12 +87,16 @@ p {
     color: #333;
 }
 
-.content ul {
+.links{
     color: #4e4b5c;
     font-size:1em;
 }
 
-.content li a{
+.links li {
+    margin: 2px 0;
+}
+
+.links li a{
     color: #4e4b5c;
     margin-top: 1em;
 }
