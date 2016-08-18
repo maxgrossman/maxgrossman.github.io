@@ -1,0 +1,149 @@
+@import "bootstrap";
+
+/* Main CSS for all pages */
+
+html,body {
+    font-family: "Open Sans", sans-serif;
+    margin: auto;
+    max-width: 700px;
+    min-width: 275px;
+    width: 100%;
+}
+
+ul {
+    font-size:1.2em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+.header {
+    margin:auto;
+    width: 90%;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.headimg ul {
+    display:inline;
+    margin: 2px;
+    text-align: center;
+    width: 100%;
+}
+
+.headimg img {
+    max-height: 40px;
+    min-height: 20px;
+    height:10%;
+    max-width:40px;
+    min-width:20px;
+    width:10%;
+    margin: 5px 20px;
+}
+
+.nav {
+    width:100%;
+    height: 20px;
+}
+
+.nav ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    box-sizing: border-box;
+    float: left;
+    list-style: none;
+    text-align: center;
+    width: 25%;
+}
+
+.nav ul li a {
+    border-left: none;
+}
+
+.nav ul li a {
+    color:rgba(80,171,242,1);
+    display: block;
+    text-decoration: none;
+}
+
+
+/*  */
+
+.content {
+    margin:auto;
+    min-height: 200px;
+    padding: 5px 0 60px 0;
+    position:relative;
+    top: 5px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+p {
+    line-height: 1.4em;
+    color: #333;
+}
+
+.links{
+    color: #4e4b5c;
+    font-size:1em;
+}
+
+.links li {
+    margin: 2px 0;
+}
+
+.links li a{
+    color: #4e4b5c;
+    margin-top: 1em;
+}
+
+ul.posts { 
+    font-size: 1em;
+    list-style-image: url(../images/lilwave_emoji.png);
+    margin: 20px auto 40px; 
+}
+
+ul.posts li {
+    margin:5px 0 5px 32px;
+}
+
+/* Footer */
+
+.footer {
+    font-size: .8em;
+    height: 100px;
+    margin:auto;
+    width: 95%;
+}
+
+.footer li{
+    display: inline;
+    position:relative;
+    line-height: 100px;
+}
+
+.footer img {
+    max-height: 30px;
+    min-height: 10px;
+    height:10%;
+    max-width:30px;
+    min-width:10px;
+    width:10%;
+    margin: 5px 20px;
+}
