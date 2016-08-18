@@ -6,7 +6,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>{{ page.title }}</title>
             <!-- link to main stylesheet -->
-            <link rel="stylesheet" type="text/css" href="../css/main.css">
+            <link rel="stylesheet" type="text/css" href="{{base.url}}/css/main.css">
             <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         </head>
         <!-- pages have three sections, the header, the content, and the footer -->
@@ -19,17 +19,17 @@
             <div class="header">
                 <ul>
                     <li>
-                        <img src="../images/SurfPicReg.png">
-                        <img src="../images/world_2.png">
-                        <img src="../images/SurfPicGoof.png">
+                        <img src="{{base.url}}/images/SurfPicReg.png">
+                        <img src="{{base.url}}/images/world_2.png">
+                        <img src="{{base.url}}/images/SurfPicGoof.png">
                     </li>
                 </ul>                    
                 <nav class="nav">
                     <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../about">About</a></li>
-                        <li><a href="../projects">Projects</a></li>
-                        <li><a href="../blog">Blog</a></li> 
+                        <li><a href="{{base.url}}/">Home</a></li>
+                        <li><a href="{{base.url}}/about">About</a></li>
+                        <li><a href="{{base.url}}/projects">Projects</a></li>
+                        <li><a href="{{base.url}}/blog">Blog</a></li> 
                     </ul>    
                 </nav>
             </div>
@@ -40,10 +40,10 @@
             </div>
             <div class="footer">
                 <ul>
-                    <li><a href="mailto:m.grossman1813@gmail.com"><img src="../images/Bl-Email-Circle.png"/></a></li>
-                    <li><a href="https://github.com/maxgrossman"><img src="../images/bl_github-512.png"/></a></li>
-                    <li><a href="https://twitter.com/maxgrossman13"><img src="../images/bl_twitter_circle.png"/></a></li>
-                    <li><a href="https://linkedin.com/in/maxgrossman1"><img src="../images/bl_linkedin_circle.png"/></a></li>
+                    <li><a href="mailto:m.grossman1813@gmail.com"><img src="{{base.url}}/images/Bl-Email-Circle.png"/></a></li>
+                    <li><a href="https://github.com/maxgrossman"><img src="{{base.url}}/images/bl_github-512.png"/></a></li>
+                    <li><a href="https://twitter.com/maxgrossman13"><img src="{{base.url}}/images/bl_twitter_circle.png"/></a></li>
+                    <li><a href="https://linkedin.com/in/maxgrossman1"><img src="{{base.url}}/images/bl_linkedin_circle.png"/></a></li>
                 </ul>
             </div>
         </body>
