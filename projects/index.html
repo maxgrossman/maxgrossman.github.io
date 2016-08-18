@@ -18,6 +18,16 @@ title: Projects
                 {% endif %}
             {% endfor %}        
             </ul>
+            <h2>Videos</h2>
+            <ul class="posts">
+            {% for video in site.data.videos %}
+                <li>
+                    <a href="{{ videos.link }}" style="color:#4e4b5c">
+                        {{ video.name }}
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
             
 		</div>
         
