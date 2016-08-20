@@ -1,0 +1,23 @@
+<head>
+    c<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <!-- link to main stylesheet plus font -->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- link to custom css and js -->
+    {% if page.custom_css %}
+    {% for stylesheet in page.custom_css %}
+    <link rel="stylesheet" href="../css/{{ stylesheet }}.css" media="screen" type="text/css">
+    {% endfor %}
+    {% endif %}
+    {% if page.custom_js %}
+    {% for js_file in page.custom_js %}
+    <script src='../js/{{ js_file }}.js' type="text/javascript"></script>
+    {% endfor %}
+    {% endif %}
+    <style>
+        #map{ height: 400px;}
+    </style>
+</head>

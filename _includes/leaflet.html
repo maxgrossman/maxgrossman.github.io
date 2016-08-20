@@ -1,0 +1,31 @@
+<!-- Make the div, call it map -->
+    <div id="map"></div>
+    <script>
+
+    // initialize the map, in a map variable
+    var map = L.map('map').setView([20, 2], 2);
+    // add basemap. thanks leaflet-providers
+    L.tileLayer.provider('Thunderforest.Outdoors').addTo(map);
+    // geoJSON variable
+    $.getJSON("MaxProjects.geojson",function(data) {
+        // create custom marker
+        var surfIcon = L.icon({
+            iconUrl: "SurfPicReg.png",
+            iconSize: [20,25]
+        });
+        // add geoJSON as data layer
+        L.geoJson(data, {
+            // connect geoJson with surfIcon
+            pointToLayer: function(feature,latlng){
+                // setting marker object to maker variable 
+                var marker = L.marker(latlng,{icon:surfIcon});
+                // bind popups to makerks
+                marker.bindPopup(
+                    "<a>Work: </a>" + feature.properties.MapDescription + "<br/>" +
+                    "<a>Desc: </a>" + feature.properties.MapDescriptionLong
+                );
+            return marker;
+            }
+        }).addTo(map);
+    });
+  </script>
