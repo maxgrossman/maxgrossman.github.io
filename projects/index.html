@@ -18,6 +18,10 @@ custom_js:
                 {% if image.path contains 'images/maps' %}
                 <li>
                     <a href="{{ site.baseurl }}{{ image.path }}" style="color:#4e4b5c">
+                        <!-- 
+                            gets string of path to image, removes dir path (hardcoded, don't tell) 
+                            and gets rid of image extension. I named the images nicely so I can do this.
+                        -->
                         {{ image.path | remove:"/assets/images/maps/" | remove: image.extname }}
                     </a>
                 </li>
@@ -30,6 +34,17 @@ custom_js:
                 <li>
                     <a href="{{ video.webadd }}"style="color:#4e4b5c">
                         {{ video.name }}
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+            
+            <h2>Project Links</h2>
+            <ul class ="posts">
+            {% for project in site.data.projectlinks %}
+                <li>
+                    <a href="{{ projectlinks.webadd }}"style="color:#4e4b5c">
+                        {{ project.name }}
                     </a>
                 </li>
             {% endfor %}

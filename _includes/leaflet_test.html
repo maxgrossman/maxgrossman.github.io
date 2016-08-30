@@ -3,29 +3,21 @@
     <script>
 
     // initialize the map, in a map variable
-    var map = L.map('map').setView({{ data.leaflet.view }});
+    var map = L.map('map').setView([20, 2], 2);
+    // setting min zoom
+    if ( $(window).width() > 400) {      
+        map.options.minZoom = 2;
+    } 
+    else {
+        map.options.minZoom = 1;
+    }
     // add basemap. thanks leaflet-providers
-    L.tileLayer.provider('Thunderforest.Outdoors').addTo(map);
-    // load GeoJSON from extermal file with jquery
-    $.getJSON("MaxProjects.geojson",function(data) {
-        // create custom marker
-        var surfIcon = L.icon({
-            iconUrl: "SurfPicReg.png",
-            iconSize: [20,25]
-        });
-        // add geoJSON as data layer
-        L.geoJson(data, {
-            // connect geoJson with surfIcon
-            pointToLayer: function(feature,latlng){
-                // setting marker object to maker variable 
-                var marker = L.marker(latlng,{icon:surfIcon});
-                // bind popups to makerks
-                marker.bindPopup(
-                    "<a>Work: </a>" + feature.properties.MapDescription + "<br/>" +
-                    "<a>Desc: </a>" + feature.properties.MapDescriptionLong
-                );
-            return marker;
-            }
-        }).addTo(map);
-    });
+    L.tileLayer.provider('Stamen.Terrain').addTo(map);
+    // geoJSON variable
+    function addDataToMap(data, map) {
+        var dataLayer = L.geoJson(data);
+        dataLayer.addTo(map);
+    };
+
+    $.getJSON("MaxProjects.geojson", function(data) {addDataToMap(data, map);});
   </script>

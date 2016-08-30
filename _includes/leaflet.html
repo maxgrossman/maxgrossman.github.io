@@ -4,6 +4,13 @@
 
     // initialize the map, in a map variable
     var map = L.map('map').setView([20, 2], 2);
+    // setting min zoom
+    if ( $(window).width() > 400) {      
+        map.options.minZoom = 2;
+    } 
+    else {
+        map.options.minZoom = 1;
+    }
     // add basemap. thanks leaflet-providers
     L.tileLayer.provider('Thunderforest.Outdoors').addTo(map);
     // geoJSON variable
