@@ -1,0 +1,164 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "Ethiopia",
+        "MapDescription": "Ethiopian Sustainable Farms",
+        "MapDescriptionLong": "Sustainable farming areas",
+        "MapLink": "https://maxgrossmanblog.files.wordpress.com/2016/01/sustfarmethiopia.pdf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.85,
+          9.017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "Vietnam",
+        "MapDescription": "Vietnam Demographics",
+        "MapDescriptionLong": "",
+        "MapLink": "https://maxgrossmanblog.files.wordpress.com/2016/01/maxgrossman_homework01.pdf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.85,
+          21.033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "Potomac",
+        "MapDescription": "Interpolated Potomac Digtal Elevation Model",
+        "MapDescriptionLong": "Interpolation methods test with DEM",
+        "MapLink": "https://maxgrossmanblog.files.wordpress.com/2016/01/interpolation_sampling_grossman_techspatan.pdf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.079,
+          38.904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "WestPalm",
+        "MapDescription": "Palm Beach County Solar Suitable Lands",
+        "MapDescriptionLong": "Multi-criteria evaluation of solar suitable lands",
+        "MapLink": "https://maxgrossmanblog.wordpress.com/solar-suitability-project/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.064,
+          26.71
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "IndustrialAccident",
+        "MapDescription": "European Industrial Accident Risk Area ",
+        "MapDescriptionLong": "Areas impacted from industrial accident",
+        "MapLink": "https://maxgrossmanblog.files.wordpress.com/2016/01/industrialaccidentriskarea_europe.pdf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.152,
+          50.189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "CenterOcean",
+        "MapDescription": "Global Horizontal Irradiance v. Non-electrified Population ",
+        "MapDescriptionLong": "Countries' solar potential and populations without energy access",
+        "MapLink": "https://maxgrossmanblog.files.wordpress.com/2016/01/solarpotential_elect_v3__.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -50.57,
+          30.878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "CenterOcean1",
+        "MapDescription": "Global Power Sector Emissions v. Solar Capacity ",
+        "MapDescriptionLong": "Countries' greenhouse gas emissions countries and solar capacity",
+        "MapLink": "https://maxgrossmanblog.files.wordpress.com/2016/01/poweremissionssolarcapacitymap.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -30.57,
+          30.878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "Bhutan",
+        "MapDescription": "Jigme Singye Wangchuck National Park Forest Loss",
+        "MapDescriptionLong": "Forest cover loss from 1989 to 2013",
+        "MapLink": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.397,
+          27.209
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "SolarStates",
+        "MapDescription": "US States' Solar Friendliness",
+        "MapDescriptionLong": "Relative strenghts of US states' solar industries",
+        "MapLink": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.381,
+          38.878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Place": "Malawi",
+        "MapDescription": "Malawi Landslide Susceptibility and Exposure",
+        "MapDescriptionLong": "Areas susceptible to landslides and distribution/location of landslide exposed people"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.0168,
+          -15.767
+        ]
+      }
+    }
+  ]
+}
