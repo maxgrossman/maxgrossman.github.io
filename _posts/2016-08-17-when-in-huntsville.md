@@ -1,5 +1,5 @@
 ---
-layout: post_leaf
+layout: post
 title: When in Huntsville
 date: 2016-08-17
 ---
