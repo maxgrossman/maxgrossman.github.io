@@ -1,3 +1,11 @@
+# Jekyll goodies #
+##################
+
 _site
 .sass-cache
 .jekyll-metadata
+
+# os garbagio #
+###############
+.DS_Store
+.DS_Store?
