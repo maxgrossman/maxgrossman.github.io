@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/theme/black.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <div id="slide1Div">
+            <div>
+              <h1 style='text-align:left;'>DC Latebus</h1>
+              <h4 style='text-align:left;'>Max Grossman</h4>
+            </div>
+            <div>
+              <img style='width:300px;' src='img/dcbuses.png'/>
+            <div>
+          </div>
+        </section>
+				<section>
+          <div>
+            <div class="slideTitle">
+              <h2>What?</h2>
+            </div>
+            <div class="slideDesc">
+              <h6>
+                Collect, store, categorize, and visualize WMATA bus lateness using WMATA’s API
+              </h6>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div id="slide3Div">
+            <div class="slideTitle">
+              <h2>How?</h2>
+							<img style="height:500px" src="img/minimaps.png"/>
+            </div>
+            <div class="slideDesc">
+              <div class="slideDesc">
+                <small>Languages: R, JavaScript</small>
+                </br>
+                <small>Packages: RGDAL, RPostgreSQL, Leaflet jQuery</small>
+                <div class="flowChart a">
+                  Slice up bus routes by bus stops and save that to PostGIS DB
+                </div>
+                <div class="flowChart a">
+                  Continuosly get bus locations, query those busses and add them to segments
+                </div>
+                <div class="flowChart a">
+                  Visualize it Dude!
+                </div>
+                <div class="flowChart b">
+                  Time Space Analysis Overhaul the Aboves
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+				<section>
+          <a href="maxgrossman.github.io/visualizations/dclatebus/">
+						<h1>DEMO</h1>
+					</a>
+        </section>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/js/reveal.min.js"></script>
+		<script>
+			Reveal.initialize();
+		</script>
+	</body>
+</html>
