@@ -24,7 +24,8 @@
 }
 
 #slide3Div .slideTitle {
-  bottom: 0%;
+  text-align: left;
+  bottom: 8%;
 }
 #slide3Div .slideDesc{
   margin:auto;
@@ -34,5 +35,5 @@
   background: rgba(0,255,0,0.05)
 }
 .b {
-  background: rgba(255,0,0,0.05)
+  background: rgba(255,0,0,0.05);
 }
