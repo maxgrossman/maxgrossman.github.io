@@ -82,7 +82,7 @@ function clearAllCheckboxes(){
 // function to fetch
 function fetchData() {
   // load in validator data
-  d3.csv('https://maxgrossman.github.io/visualizations/whovalidates/',function(data) {
+  d3.csv('https://maxgrossman.github.io/visualizations/whovalidates/data/validatorsPCAclassified.csv',function(data) {
     validatorData = d3.map(data, function(d){return d.user_name})
     console.log(validatorData)
     // build tabs
